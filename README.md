@@ -8,6 +8,9 @@
 - gemfire-hello-rep
 
 ## Server Side
+- gemfire-hello-server
+
+## Function Side
 - gemfire-hello-function
 
 ## Tips
