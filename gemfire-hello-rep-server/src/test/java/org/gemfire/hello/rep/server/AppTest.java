@@ -1,4 +1,4 @@
-package io.pivotal.functions;
+package org.gemfire.hello.rep.server;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

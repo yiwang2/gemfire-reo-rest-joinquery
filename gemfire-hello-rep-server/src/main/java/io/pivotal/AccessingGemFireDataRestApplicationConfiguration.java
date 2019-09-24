@@ -6,6 +6,7 @@ import org.apache.geode.cache.DataPolicy;
 import org.apache.geode.cache.GemFireCache;
 import org.apache.geode.cache.PartitionAttributes;
 import org.apache.geode.cache.RegionAttributes;
+import org.apache.geode.cache.execute.FunctionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -22,6 +23,7 @@ import org.springframework.data.gemfire.function.config.EnableGemfireFunctions;
 import io.pivotal.bookshop.domain.BookMaster;
 import io.pivotal.bookshop.domain.Inventory;
 import io.pivotal.functions.BookMasterCustomFunction;
+import io.pivotal.functions.FindAllBooksWithLowQuantityFunction;
 
 @Configuration
 @EnableLocator
@@ -34,9 +36,19 @@ public class AccessingGemFireDataRestApplicationConfiguration {
 	  @Autowired BookMasterCustomFunction bookMasterCustomFunction;
 	 
 
+	  //for deployed function test
+	/*
+	 * @Bean FindAllBooksWithLowQuantityFunction findAllBooksWithLowQuantityFunction
+	 * () { FindAllBooksWithLowQuantityFunction function = new
+	 * FindAllBooksWithLowQuantityFunction();
+	 * FunctionService.registerFunction(function); return function; }
+	 */
+	  
+	//for normal function register
 	
 	  @Bean BookMasterCustomFunction booMasterCustomFunctions() { return new
 	  BookMasterCustomFunction(); }
+	 
 	 
 
 	/*
