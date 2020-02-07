@@ -29,7 +29,7 @@ import io.pivotal.functions.FindAllBooksWithLowQuantityFunction;
 @EnableLocator
 @EnableManager(start = true)
 @EnableGemfireFunctions
-@EnableGemfireFunctionExecutions(basePackages = "io.pivotal.functions")
+//@EnableGemfireFunctionExecutions(basePackages = "io.pivotal.functions")
 public class AccessingGemFireDataRestApplicationConfiguration {
 
 	
